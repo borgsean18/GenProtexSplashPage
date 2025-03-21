@@ -1,3 +1,8 @@
+// Import styles
+import '../scss/custom.scss';
+// Import logo
+import '../img/logo.png';
+
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize particles.js
     particlesJS('particles-js', {
@@ -10,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             },
             color: {
-                value: '#64ffda'
+                value: '#ff64b1'
             },
             shape: {
                 type: 'circle',
@@ -42,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
             line_linked: {
                 enable: true,
                 distance: 150,
-                color: '#64ffda',
+                color: '#ff64b1',
                 opacity: 0.2,
                 width: 1
             },

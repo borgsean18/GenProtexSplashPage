@@ -8,19 +8,21 @@
     "bootstrap": "^5.3.3"
   },
   "scripts": {
-    "build:js": "webpack --config webpack.config.js",
-    "build:css": "sass src/scss/default.scss:dist/css/main.css --style compressed",
-    "build": "yarn build:js && yarn build:css",
-    "watch:js": "webpack --config webpack.config.js --watch",
-    "watch:css": "sass src/scss/default.scss:dist/css/main.css --style compressed --watch",
-    "dev": "concurrently \"yarn watch:js\" \"yarn watch:css\""
+    "build": "webpack --config webpack.config.js",
+    "dev": "webpack serve --mode development"
   },
   "devDependencies": {
     "@babel/core": "^7.26.10",
     "@babel/preset-env": "^7.26.9",
     "babel-loader": "^10.0.0",
     "concurrently": "^9.1.2",
-    "sass": "^1.85.1",
+    "css-loader": "^7.1.2",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.3",
+    "mini-css-extract-plugin": "^2.9.2",
+    "sass": "^1.86.0",
+    "sass-loader": "^16.0.5",
+    "style-loader": "^4.0.0",
     "webpack": "^5.98.0",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.0"
