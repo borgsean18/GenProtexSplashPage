@@ -94,28 +94,6 @@ document.addEventListener('DOMContentLoaded', function() {
         retina_detect: true
     });
 
-    // Form submission handling
-    const contactForm = document.getElementById('contact-form');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            // In a real implementation, you would send this data to a server
-            console.log('Form submitted:', { name, email, message });
-            
-            // Show success message
-            alert('Thank you for your message! We will get back to you soon.');
-            
-            // Reset form
-            contactForm.reset();
-        });
-    }
-
     // Update year in footer
     const year = new Date().getFullYear();
     document.getElementById('year').textContent = year;

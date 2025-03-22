@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lorem Ipsum</title>
-    <!-- CSS will be injected by webpack -->
+    <title>GenProtex</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <!-- JavaScript will be automatically injected by webpack -->
 </head>
 <body>
     <div id="particles-js" class="particles-container"></div>
@@ -15,7 +13,7 @@
     <div class="container">
         <header>
             <div class="logo">
-                <img src="img/logo.png" alt="Lorem Ipsum Logo">
+                <img src="img/logo.png" alt="GenProtex Logo">
             </div>
         </header>
         
@@ -28,8 +26,13 @@
             <div class="card-container">
                 <div class="card">
                     <div class="card-content">
-                        <h3><i class="fas fa-shield-alt"></i> About Us</h3>
-                        <p>Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin ultrices.</p>
+                        <h3><i class="fa-solid fa-dna"></i> About Us</h3>
+                        <p>
+                            Drug development takes over 12 years and £2bn, with a 90% failure rate—half due to poor target validation.
+                        </p>
+                        <p>
+                            At GenProtex, we're pioneering a new technology to improve target validation and help future drugs hit the right targets.
+                        </p>                                              
                     </div>
                 </div>
                 
@@ -38,10 +41,10 @@
                         <h3><i class="fas fa-envelope"></i> Contact Us</h3>
                         <!-- <p>Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum.</p> -->
                         
-                        <form id="contact-form">
-                            <input type="text" id="name" placeholder="Name" required>
-                            <input type="email" id="email" placeholder="Email" required>
-                            <textarea id="message" placeholder="Write Message..." required></textarea>
+                        <form id="contact-form" action="https://formspree.io/f/xzzerbva" method="POST">
+                            <input type="text" id="name" name="name" placeholder="Name" required>
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                            <textarea id="message" name="message" placeholder="Write Message..." required></textarea>
                             <button type="submit">Send Message</button>
                         </form>
                     </div>
