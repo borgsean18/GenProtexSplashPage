@@ -1,14 +1,21 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TerserPlugin = require('terser-webpack-plugin')
+
 const path = require('path');
 
 module.exports = {
   mode: 'production',
-  entry: './src/js/script.js',
+  entry: {
+    script: './src/js/script.js',
+    content: './src/js/content.js'
+  },
   output: {
     path: path.resolve(__dirname, 'docs'),
-    filename: 'js/script.js',
-    clean: true,
+    filename: 'js/[name].js',
+    clean: {
+      keep: /CNAME/
+    },
     assetModuleFilename: 'assets/[name][ext]'
   },
   module: {
@@ -40,6 +47,17 @@ module.exports = {
         type: 'asset/resource'
       }
     ]
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin({
+      terserOptions: {
+        compress: {
+          drop_console: true,
+          drop_debugger: true
+        }
+      }
+    })]
   },
   plugins: [
     new HtmlWebpackPlugin({
