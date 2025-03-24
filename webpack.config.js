@@ -7,6 +7,7 @@ const path = require('path');
 module.exports = {
   mode: 'production',
   entry: {
+    imports: './src/js/imports.js',
     content: './src/js/content.js',
     script: './src/js/script.js'
   },

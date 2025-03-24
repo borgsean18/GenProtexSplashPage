@@ -1,8 +1,3 @@
-// Import styles
-import '../scss/custom.scss';
-// Import logo
-import '../img/logo.png';
-
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize particles.js
     particlesJS('particles-js', {
