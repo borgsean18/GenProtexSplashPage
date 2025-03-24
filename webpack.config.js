@@ -8,7 +8,7 @@ module.exports = {
   mode: 'production',
   entry: {
     script: './src/js/script.js',
-    content: './src/js/content.js'
+    // content: './src/js/content.js'
   },
   output: {
     path: path.resolve(__dirname, 'docs'),
