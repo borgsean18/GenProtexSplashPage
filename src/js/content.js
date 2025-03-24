@@ -3,8 +3,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         const content = await requestSplashPageContent();
 
         if (content) {
-            renderIntroSection(content.intro);
-            renderAboutUsSection(content.aboutUs);
+            if (content.intro !== undefined)
+                renderIntroSection(content.intro);
+            if (content.aboutUs !== undefined)
+                renderAboutUsSection(content.aboutUs);
         }
     } catch (error) {
         console.error('Error loading content:', error);
